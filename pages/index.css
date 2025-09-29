@@ -1,0 +1,14 @@
+@import url("../vendor/normalize.css");
+@import url("../vendor/fonts.css");
+
+@import url("../blocks/page.css");
+@import url("../blocks/content.css");
+@import url("../blocks/header.css");
+@import url("../blocks/footer.css");
+@import url("../blocks/budget.css");
+@import url("../blocks/button.css");
+@import url("../blocks/stats.css");
+@import url("../blocks/expenses.css");
+@import url("../blocks/expense.css");
+@import url("../blocks/controls.css");
+@import url("../blocks/modal.css");

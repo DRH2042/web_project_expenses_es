@@ -1,0 +1,18 @@
+.footer {
+  padding: 86px 0 26px;
+}
+
+.footer__copyright {
+  font-size: 16px;
+  line-height: normal;
+  font-weight: 400;
+  color: rgb(154, 154, 170);
+  margin: 0 auto;
+  text-align: center;
+}
+
+@media screen and (max-width: 627px) {
+  .footer {
+    display: none;
+  }
+}

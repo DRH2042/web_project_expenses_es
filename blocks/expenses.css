@@ -1,0 +1,31 @@
+.expenses {
+  grid-column: span 3;
+  display: grid;
+  row-gap: 10px;
+}
+
+.expenses__list {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  row-gap: 5px;
+}
+
+.expenses__title {
+  color: rgb(33, 35, 63);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0 0 0 20px;
+}
+
+@media screen and (max-width: 627px) {
+  .expenses {
+    grid-column: span 1;
+    margin-bottom: 10px;
+  }
+
+  .expenses__title {
+    font-size: 14px;
+  }
+}

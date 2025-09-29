@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="ie=edge" http-equiv="X-UA-Compatible" />
+    <title>Gastos</title>
+    <link href="./pages/index.css" rel="stylesheet" />
+  </head>
+  <body class="page">
+    <div class="page__content">
+      <header class="header">
+        <h1 class="header__logo">Gastos</h1>
+      </header>
+      <main class="content">
+        <section class="budget">
+          <h3 class="budget__title">Presupuesto</h3>
+          <input type="number" class="budget__input" />
+          <button class="button budget__set-btn" type="button">Asignar</button>
+        </section>
+        <section class="stats stats_general">
+          <h2 class="stats__title">Estadísticas generales</h2>
+          <div class="stats__container">
+            <div class="stats__item">
+              <h3 class="stats__item-title">Gastos totales</h3>
+              <p class="stats__item-value" id="total-expenses-value"></p>
+            </div>
+            <div class="stats__item">
+              <h3 class="stats__item-title">Gasto promedio</h3>
+              <p class="stats__item-value" id="average-expense-value"></p>
+            </div>
+            <div class="stats__item stats__item_balance">
+              <h3 class="stats__item-title">Saldo</h3>
+              <p
+                class="stats__item-value stats__item-value_balance"
+                id="balance-value"
+              ></p>
+            </div>
+          </div>
+        </section>
+        <section class="stats stats_largest">
+          <h2 class="stats__title">Categoría más grande</h2>
+          <div class="stats__container">
+            <div class="stats__item">
+              <h3 class="stats__item-title stats__item-title_largest"></h3>
+              <p
+                class="stats__item-value stats__item-value_largest"
+                id="largest-category-value"
+              ></p>
+            </div>
+          </div>
+        </section>
+        <section class="stats stats_categories">
+          <h2 class="stats__title">Estadísticas por categoría</h2>
+          <div class="stats__container stats__container_categories">
+            <div class="stats__item stats__item_categories">
+              <h3 class="stats__item-title">Comida</h3>
+              <p
+                class="stats__item-value stats__item-value_categories"
+                id="groceries-value"
+              ></p>
+            </div>
+            <div class="stats__item stats__item_categories">
+              <h3 class="stats__item-title">Comer fuera</h3>
+              <p
+                class="stats__item-value stats__item-value_categories"
+                id="restaurants-value"
+              ></p>
+            </div>
+            <div class="stats__item stats__item_categories">
+              <h3 class="stats__item-title">Transporte</h3>
+              <p
+                class="stats__item-value stats__item-value_categories"
+                id="transport-value"
+              ></p>
+            </div>
+            <div class="stats__item stats__item_categories">
+              <h3 class="stats__item-title">Hogar</h3>
+              <p
+                class="stats__item-value stats__item-value_categories"
+                id="home-value"
+              ></p>
+            </div>
+            <div class="stats__item stats__item_categories">
+              <h3 class="stats__item-title">Suscripciones</h3>
+              <p
+                class="stats__item-value stats__item-value_categories"
+                id="subscriptions-value"
+              ></p>
+            </div>
+          </div>
+        </section>
+        <section class="expenses">
+          <h2 class="expenses__title">Lista de gastos</h2>
+          <ul class="expenses__list">
+            <template id="expense-template">
+              <li class="expense">
+                <div class="expense__category-group">
+                  <button
+                    aria-label="Delete expense"
+                    class="expense__delete-btn"
+                    type="button"
+                  ></button>
+                  <p class="expense__category"></p>
+                </div>
+                <p class="expense__amount"></p>
+              </li>
+            </template>
+          </ul>
+        </section>
+        <section class="controls">
+          <button class="button button_grey controls__clear-btn" type="button">
+            Borrar todo
+          </button>
+          <button class="button controls__add-btn" type="button">
+            Nuevo gasto
+          </button>
+        </section>
+      </main>
+      <footer class="footer">
+        <p class="footer__copyright">2025 &copy; Gastos</p>
+      </footer>
+    </div>
+    <div class="modal" id="add-expense-modal">
+      <div class="modal__content">
+        <h3 class="modal__title">Agregar gasto</h3>
+        <form class="modal__form" id="add-expense-form">
+          <label class="modal__label" for="expense-category-input">
+            Categoría
+            <select
+              name="categories"
+              id="expense-category-input"
+              class="modal__input"
+            >
+              <option value="groceries">Comida</option>
+              <option value="restaurants">Comer fuera</option>
+              <option value="transport">Transporte</option>
+              <option value="home">Hogar</option>
+              <option value="subscriptions">Suscripciones</option>
+            </select>
+          </label>
+          <label class="modal__label" for="expense-amount-input">
+            Cantidad
+            <input
+              id="expense-amount-input"
+              class="modal__input"
+              name="amount"
+              placeholder="Agregar importe"
+              type="number"
+              step="any"
+            />
+          </label>
+          <div class="modal__buttons">
+            <button class="button button_grey modal__close-btn" type="button">
+              Cancelar
+            </button>
+            <button class="button modal__submit-btn" type="submit">
+              Agregar
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

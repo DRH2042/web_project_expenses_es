@@ -1,0 +1,21 @@
+.controls {
+  grid-column: span 3;
+  display: flex;
+  justify-content: space-between;
+  column-gap: 10px;
+}
+
+.controls__clear-btn {
+  min-width: 182px;
+}
+
+.controls__add-btn {
+  min-width: 182px;
+}
+
+@media screen and (max-width: 627px) {
+  .controls {
+    grid-column: span 1;
+    padding-bottom: 30px;
+  }
+}

@@ -1,0 +1,65 @@
+.budget {
+  display: flex;
+  row-gap: 10px;
+  column-gap: 20px;
+  flex-wrap: wrap;
+  grid-column: span 3;
+}
+
+.budget__title {
+  margin: 0;
+  width: 100%;
+  color: rgb(34, 34, 57);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.budget__input {
+  min-width: 293px;
+  box-sizing: border-box;
+  text-align: center;
+  color: rgb(34, 34, 57);
+  font-size: 22px;
+  line-height: normal;
+  font-weight: 700;
+  padding: 14px 34px;
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+}
+
+.budget__input::placeholder {
+  color: rgb(34, 34, 57);
+}
+
+.budget__input:focus::placeholder {
+  opacity: 0;
+}
+
+.budget__set-btn {
+  font-weight: 700;
+  font-size: 22px;
+}
+
+@media screen and (max-width: 627px) {
+  .budget {
+    grid-column: span 1;
+    column-gap: 10px;
+    margin-bottom: 10px;
+  }
+  .budget__input {
+    flex: 1;
+    min-width: 0;
+    font-size: 18px;
+  }
+  .budget__set-btn {
+    flex-shrink: 0;
+    font-size: 18px;
+  }
+
+  .budget__title {
+    margin: 0 0 0 20px;
+    font-size: 14px;
+  }
+}

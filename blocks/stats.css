@@ -1,0 +1,143 @@
+.stats {
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  padding: 20px;
+}
+
+.stats_general {
+  grid-column: span 3;
+}
+
+.stats_largest {
+  grid-column: span 1;
+}
+
+.stats_categories {
+  grid-column: span 2;
+}
+
+.stats__title {
+  color: rgb(154, 154, 170);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0 0 10px 0;
+}
+
+.stats__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+}
+
+.stats__item {
+  display: grid;
+  row-gap: 5px;
+}
+
+.stats__item-title {
+  margin: 0;
+  color: rgb(34, 34, 57);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.stats__item-title_largest {
+  font-size: 22px;
+  color: rgb(84, 58, 248);
+}
+
+.stats__item-value {
+  margin: 0;
+  color: rgb(34, 34, 57);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.stats__item-value_balance {
+  font-weight: 700;
+  line-height: normal;
+}
+
+.stats__item-value_balance_negative {
+  color: rgba(232, 77, 89, 1); 
+}
+
+.stats__item-value_balance_warning {
+  color: rgba(247, 184, 38, 1); 
+}
+
+.stats__item-value_balance_positive {
+  color: rgba(26, 183, 89, 1); 
+}
+
+.stats__item-value_largest {
+  font-size: 22px;
+  color: rgb(84, 58, 248);
+  font-weight: 700;
+}
+
+@media screen and (max-width: 1200px) {
+  .stats__container_categories {
+    grid-template-columns: 1fr;
+    row-gap: 5px;
+  }
+
+  .stats__item_categories {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .stats__item-value_categories {
+    text-align: end;
+  }
+}
+
+@media screen and (max-width: 627px) {
+  .stats_general {
+    grid-column: span 1;
+  }
+
+  .stats_largest {
+    grid-column: span 1;
+  }
+
+  .stats_categories {
+    grid-column: span 1;
+    margin-bottom: 5px;
+  }
+
+  .stats__container {
+    grid-template-columns: 1fr;
+    row-gap: 5px;
+  }
+
+  .stats__item {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .stats__item-title {
+    font-size: 16px;
+  }
+
+  .stats__item-title_largest {
+    font-size: 20px;
+  }
+
+  .stats__item-value {
+    font-size: 16px;
+    text-align: end;
+  }
+
+  .stats__item-value_largest {
+    font-size: 20px;
+  }
+
+  .stats__item-value_balance {
+    font-size: 20px;
+  }
+
+  .stats__title {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,61 @@
+.expense {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  padding: 15px 25px 15px 20px;
+}
+
+.expense__category-group {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.expense__category {
+  margin: 0;
+  color: rgb(34, 34, 57);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.expense__amount {
+  margin: 0;
+  color: rgb(34, 34, 57);
+  text-align: right;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.expense__delete-btn {
+  background-color: rgba(240, 239, 244, 1);
+  background-image: url("../images/delete-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 9px 9px;
+  border: none;
+  border-radius: 50%;
+  width: 21px;
+  height: 21px;
+  cursor: pointer;
+}
+
+.expense__delete-btn:hover {
+  background-color: rgba(247, 247, 249, 1);
+}
+
+.expense__delete-btn:active {
+  background-color: rgba(251, 251, 252, 1);
+}
+
+@media screen and (max-width: 627px) {
+  .expense__category {
+    font-size: 16px;
+  }
+
+  .expense__amount {
+    font-size: 16px;
+  }
+}

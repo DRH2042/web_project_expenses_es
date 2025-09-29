@@ -1,0 +1,12 @@
+.page {
+  background-color: rgba(240, 239, 244, 1);
+  font-family: Manrope, Arial, Helvetica, sans-serif;
+}
+
+.page__content {
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  flex-direction: column;
+}
